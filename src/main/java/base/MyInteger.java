@@ -7,7 +7,6 @@ public class MyInteger
 	
 	public MyInteger(int iValue) 
 	{
-		
 		Number = iValue;
 	}
 
@@ -17,19 +16,7 @@ public class MyInteger
 		return Number;
 	}
 	
-	public boolean isPrime() 
-	{
-		int value = 0;
-		for (value = 2; 
-				value < Number; 
-				value++) 
-		{
-			if (Number % value == 0)
-				return false;
-		}
-		return true;
-	
-	}
+
 	
 	public boolean isEven() 
 	{
@@ -47,8 +34,17 @@ public class MyInteger
 			return false;
 	}
 	
-	public static boolean isEven(int Number) 
-	{
+	public boolean isPrime() 
+	{	
+		for (int i = 2; i < Number;i++) 
+		{
+			if (Number % i == 0)
+				return false;
+		}
+		return true;
+	}
+	
+	public static boolean isEven(int Number) {
 		if (Number % 2 == 0)
 			return true;
 		else
@@ -65,10 +61,8 @@ public class MyInteger
 	
 	public static boolean isPrime(int Number) 
 	{
-		int value = 0;
-		for (value = 2; value < Number; value++) 
-		{
-			if (Number % value == 0)
+		for (int i = 2; i < Number; i++) {
+			if (Number % i == 0)
 				return false;
 		}
 		return true;
